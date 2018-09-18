@@ -147,7 +147,14 @@ data_s %>%
 
 ```{r}
 gapminder %>%
-  filter(pop>1e9)
+  filter(pop > 1e9) # the argument of the filter function must be a logical operation
+```
+
+Brief dicussion about loical operation:
+
+```{r}
+A <- c(1, 2, 3, 4, 5)
+A > 2
 ```
 
 
