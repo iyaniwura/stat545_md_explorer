@@ -1,7 +1,10 @@
 # stat545_md_exploration
 A repository for exploring version control and markdown
 
-My first edit of the read me file in stat545 lecture. It is a nice to be in this calss. I hope to gain a lot of knowledge that will be beneficial to me and the people around me
+This repo contains the following files:
 
-
-Edited this from test1
+1. md_explorer.md
+2.  md_explorer.html
+3.  md_explorer.pdf
+4. R_notebook.Rmd
+5. R_notebook.nb.html
