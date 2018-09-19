@@ -1,6 +1,6 @@
 # Day2 Activities
 
-This folder contains file that were used for day 2 activities in class.
+This folder contains file that were used for day 2 activities in class. Here is a brief description of the file contained in this folder:
 
 0. README.md
 1. md_explorer.md: markdown documents using how to code in makrdown
