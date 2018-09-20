@@ -32,7 +32,6 @@ In this worksheet, we'll be exploring various plot types (i.e., geometric object
 ```{r}
 library(tidyverse)
 library(gapminder)
-library(ggplot2)
 ```
 
 
@@ -315,7 +314,6 @@ Let's make some time/line plot, starting with Canada's life expectancy over time
 
 
 ```{r}
-library(dplyr)
 gapminder %>%
   filter(country == "Canada") %>%
      ggplot(aes(year,lifeExp)) + 

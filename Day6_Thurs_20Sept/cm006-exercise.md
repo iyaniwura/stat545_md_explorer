@@ -43,7 +43,6 @@ library(tidyverse)
 
 ``` r
 library(gapminder)
-library(ggplot2)
 ```
 
 Scatterplot
@@ -350,7 +349,6 @@ Let's make some time/line plot, starting with Canada's life expectancy over time
     4.  Also displays the points
 
 ``` r
-library(dplyr)
 gapminder %>%
   filter(country == "Canada") %>%
      ggplot(aes(year,lifeExp)) + 
