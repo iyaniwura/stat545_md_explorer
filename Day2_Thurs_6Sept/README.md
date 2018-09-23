@@ -1,6 +1,6 @@
 # Day2 Activities
 
-This folder contains file that were used for day 2 activities in class. Here is a brief description of the file contained in this folder:
+This folder contains file that were used for day 2 activities in class. In this class activity, we explored how to use the plain text, Rmd, and md documens. Here is a brief description of the file contained in this folder:
 
 0. README.md
 1. md_explorer.md: markdown documents using how to code in makrdown
