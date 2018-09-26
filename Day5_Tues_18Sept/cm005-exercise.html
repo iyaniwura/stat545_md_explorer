@@ -416,7 +416,7 @@ Sel_data</code></pre>
 <li>Only take data with population greater than 100 million.</li>
 </ol>
 <pre class="r"><code>gapminder %&gt;%
-  filter(pop&gt;1e9)</code></pre>
+  filter(pop &gt; 1e9) # the argument of the filter function must be a logical operation</code></pre>
 <pre><code>## # A tibble: 8 x 6
 ##   country continent  year lifeExp        pop gdpPercap
 ##   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;int&gt;     &lt;dbl&gt;
@@ -428,6 +428,10 @@ Sel_data</code></pre>
 ## 6 China   Asia       2007    73.0 1318683096     4959.
 ## 7 India   Asia       2002    62.9 1034172547     1747.
 ## 8 India   Asia       2007    64.7 1110396331     2452.</code></pre>
+<p>Brief dicussion about loical operation:</p>
+<pre class="r"><code>A &lt;- c(1, 2, 3, 4, 5)
+A &gt; 2</code></pre>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Of those, only take data from Asia.</li>
 </ol>

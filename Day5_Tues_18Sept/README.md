@@ -1,3 +1,6 @@
 # Day4 activities
 
-This folder contains the files for day 4 activities.
+This folder contanins the activities for day4: It contains the following files:
+
+1. 
+

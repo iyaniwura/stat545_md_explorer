@@ -2,9 +2,9 @@
 title: "Data Frame Exploration"
 output: 
     html_document:
-        theme: cerulean
-        toc: true
-        keep_md: true
+        #theme: cerulean
+        #toc: true
+        #keep_md: true
 ---
 
 ## LaTeX Equations in R Markdown
@@ -25,6 +25,11 @@ First, load the `gapminder` R package. If you don't have it installed, run `inst
 library(gapminder)
 ```
 
+```{r}
+library(petrol)
+```
+
+MASS
 gapminder
 
 ### What is a data frame?

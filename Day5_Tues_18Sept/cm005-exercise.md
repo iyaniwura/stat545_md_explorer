@@ -413,7 +413,7 @@ data_s %>%
 
 ```r
 gapminder %>%
-  filter(pop>1e9)
+  filter(pop > 1e9) # the argument of the filter function must be a logical operation
 ```
 
 ```
@@ -428,6 +428,18 @@ gapminder %>%
 ## 6 China   Asia       2007    73.0 1318683096     4959.
 ## 7 India   Asia       2002    62.9 1034172547     1747.
 ## 8 India   Asia       2007    64.7 1110396331     2452.
+```
+
+Brief dicussion about loical operation:
+
+
+```r
+A <- c(1, 2, 3, 4, 5)
+A > 2
+```
+
+```
+## [1] FALSE FALSE  TRUE  TRUE  TRUE
 ```
 
 
