@@ -1,11 +1,8 @@
 # Day5 class Activity
 
-<<<<<<< HEAD
+
 This folder contanins the activities for day4: It contains the following files:
 
-1. 
-
-=======
 The class activity involves using **dplyr()** for investigate the gapminder data. This repository contains the readme file and 4 additional files. Here is a brief description of the files:
 
 0. README.md
