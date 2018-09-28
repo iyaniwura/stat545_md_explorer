@@ -1,6 +1,8 @@
 ---
 title: "cm007 Exercises: Exploring Aesthetic Mappings"
-output: html_notebook
+output: 
+  github_document:
+  toc: yes
 editor_options: 
   chunk_output_type: inline
 ---
@@ -159,6 +161,16 @@ Let's see how Rwanda's life expectancy and GDP per capita have evolved over time
 - Add `geom_text`, with year label. 
 
 
+```{r}
+gapminder %>%
+  filter(country=="Rwanda") %>%
+    arrange(year) %>%
+      ggplot(aes(gdpPercap,lifeExp)) +
+        geom_point() +
+         geom_path(arrow=arrow())
+```
+
+
 ## Two categorical variables
 
 Try `cyl` (number of cylinders) ~ `am` (transmission) in the `mtcars` data frame.
@@ -166,6 +178,16 @@ Try `cyl` (number of cylinders) ~ `am` (transmission) in the `mtcars` data frame
 - Scatterplot? Jitterplot? No.
 - `geom_count()`.
 - `geom_bin2d()`. Compare with `geom_tile()` with `fill` aes.
+
+```{r}
+ggplot(mtcars, aes(factor(cyl),factor(am))) + 
+  geom_bin2d()
+```
+
+```{r}
+ggplot(mtcars, aes(factor(cyl),factor(am))) + 
+  geom_tile(aes(fill=factor(cyl)))
+```
 
 ## Overplotting
 
@@ -177,11 +199,33 @@ Try a scatterplot with:
 - `geom_smooth()`
 
 
+~~~
+install.packages("hexbin")
+~~~
+```{r}
+gvsl + geom_hex()
+```
+
+```{r}
+gvsl + geom_density2d()
+gvsl + geom_point(alpha =0.2) + geom_smooth(method="lm")
+
+```
+
+
+
 ## Bar plots
 
 How many countries are in each continent? Use the year 2007.
 
 1. After filtering the gapminder data to 2007, make a bar chart of the number of countries in each continent. Store everything except the geom in the variable `d`.
+
+```{r}
+gapminder %>%
+  filter(year == 2007) %>%
+    ggplot(aes(x=continent)) + 
+      geom_bar()
+```
 
 
 
@@ -197,6 +241,11 @@ __Uses of bar plots__: Get a sense of relative quantities of categories, or see 
 
 - Add `coord_polar()` to a scatterplot.
 
+```{r}
+gvsl + geom_point() + coord_polar()
+```
+
+
 
 # Want more practice?
 
@@ -211,10 +260,6 @@ ggplot( aes(year,lifeExp,color=continent)) +
     facet_wrap(~continent) 
 ```
 
-```{r}
-abline(lm(gapminder$year~gapminder$lifeExp)) +
-  facet_wrap(~continent)
-```
 
 
 __Exercise 2__: Repeat Exercise 1, but switch the _regression line_ and _geom\_point_ layers. How is this plot different from that of Exercise 1?
