@@ -1,4 +1,4 @@
-# Day10  Activities
+# Day11  Activities
 
 This folder contains file that were used for day 11 activities in the class. This class activity is about programming in R. This repo contains 3 files and the readme.md file. Here is a brief description of the folder and  files contained in this repo:
 
