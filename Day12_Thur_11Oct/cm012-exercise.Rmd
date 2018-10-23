@@ -258,7 +258,7 @@ ggplot(gapminder, aes(continent, lifeExp)) +
 
 Exercise: Try making the above box plot and violin plots, ordered by median lifeExp. Try other functions to order by by modifying the `.fun` argument.
 
-```{r, fig.width=4, fig.height=1}
+```{r, fig.width=4, fig.height=3}
 gapminder %>%
   mutate(continent= fct_reorder(continent,lifeExp)) %>%
   ggplot( aes(continent, lifeExp)) +   geom_violin()

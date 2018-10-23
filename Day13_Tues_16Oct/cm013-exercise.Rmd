@@ -1,7 +1,7 @@
 ---
 title: "cm013 Exercise"
-output: 
-  html_document
+output:
+  html_document: default
 ---
 
 ```{r}
@@ -75,7 +75,7 @@ p_scales +
 3. Use `RColorBrewer` to change the colour scheme.
     - Notice the three different types of scales: sequential, diverging, and continuous.
 
-```{r}
+```{r, height = 5}
 ## All palettes the come with RColorBrewer:
 RColorBrewer::display.brewer.all()
 
@@ -172,7 +172,7 @@ library(plotly)
 ```{r}
 p %>% 
   ggplotly() %>% 
-  htmlwidgets::saveWidget("Graph")
+  htmlwidgets::saveWidget(file = "Graph.html")
 ```
 
 

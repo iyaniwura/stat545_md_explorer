@@ -87,8 +87,8 @@ gapminder %>%
 
 ```{r}
 gapminder %>%
-  group_by(country) %>%
-    summarize(mu=mean(lifeExp),mu=median(lifeExp))
+  group_by(country)
+    #summarize(mu=mean(lifeExp),mu=median(lifeExp))
 ```
 
 ```{r}

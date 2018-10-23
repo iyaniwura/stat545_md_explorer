@@ -202,24 +202,28 @@ gapminder %>%
 
 ``` r
 gapminder %>%
-  group_by(country) %>%
-    summarize(mu=mean(lifeExp),mu=median(lifeExp))
+  group_by(country)
 ```
 
-    ## # A tibble: 142 x 2
-    ##    country        mu
-    ##    <fct>       <dbl>
-    ##  1 Afghanistan  39.1
-    ##  2 Albania      69.7
-    ##  3 Algeria      59.7
-    ##  4 Angola       39.7
-    ##  5 Argentina    69.2
-    ##  6 Australia    74.1
-    ##  7 Austria      72.7
-    ##  8 Bahrain      67.3
-    ##  9 Bangladesh   48.5
-    ## 10 Belgium      73.4
-    ## # ... with 132 more rows
+    ## # A tibble: 1,704 x 6
+    ## # Groups:   country [142]
+    ##    country     continent  year lifeExp      pop gdpPercap
+    ##    <fct>       <fct>     <int>   <dbl>    <int>     <dbl>
+    ##  1 Afghanistan Asia       1952    28.8  8425333      779.
+    ##  2 Afghanistan Asia       1957    30.3  9240934      821.
+    ##  3 Afghanistan Asia       1962    32.0 10267083      853.
+    ##  4 Afghanistan Asia       1967    34.0 11537966      836.
+    ##  5 Afghanistan Asia       1972    36.1 13079460      740.
+    ##  6 Afghanistan Asia       1977    38.4 14880372      786.
+    ##  7 Afghanistan Asia       1982    39.9 12881816      978.
+    ##  8 Afghanistan Asia       1987    40.8 13867957      852.
+    ##  9 Afghanistan Asia       1992    41.7 16317921      649.
+    ## 10 Afghanistan Asia       1997    41.8 22227415      635.
+    ## # ... with 1,694 more rows
+
+``` r
+    #summarize(mu=mean(lifeExp),mu=median(lifeExp))
+```
 
 ``` r
 gapminder %>%
