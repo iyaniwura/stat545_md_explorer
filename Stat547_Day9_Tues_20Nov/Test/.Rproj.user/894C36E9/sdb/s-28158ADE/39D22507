@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(ggplot2)\nlibrary(dplyr)\n# FYI: there is one call to plyr::revalue() so plyr should be installed but not\n# loaded\n\nlotr_dat <- read.delim(\"lotr_raw.tsv\")\n\n## reorder Film factor levels based on story\nold_levels <- levels(lotr_dat$Film)\nj_order <- sapply(c(\"Fellowship\", \"Towers\", \"Return\"),\n\t\t\t\t\t\t\t\t\tfunction(x) grep(x, old_levels))\nnew_levels <- old_levels[j_order]\n\n## apply new factor levels to Film\n## revalue Race\n##   - no one knows that the Ainur are the wizards: Ainur --> Wizard\n##   - let's be consistent: Men --> Man\n## drop least frequent Races\n## reorder Race based on words spoken\n## arrange the data on Race, Film, Words\nlotr_dat <- lotr_dat %>%\n\tmutate(Film = factor(as.character(Film), new_levels),\n\t\t\t\t Race = plyr::revalue(Race, c(Ainur = \"Wizard\", Men = \"Man\"))) %>%\n\tfilter(!(Race %in% c(\"Gollum\", \"Ent\", \"Dead\", \"Nazgul\"))) %>%\n\tmutate(Race = reorder(Race, Words, sum)) %>%\n\tarrange(Race, Film, Words) %>%\n\tdroplevels\n\n## make a plot\np <- ggplot(lotr_dat, aes(x = Race, weight = Words)) + geom_bar()\nggsave(\"barchart_total-words-by-race.png\", p)\n\n## write data to file\nwrite.table(lotr_dat, \"lotr_clean.tsv\", quote = FALSE,\n            sep = \"\\t\", row.names = FALSE)\n",
+    "created" : 1542738747198.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "397188199",
+    "id" : "39D22507",
+    "lastKnownWriteTime" : 1533832136,
+    "last_content_update" : 1533832136,
+    "path" : "~/Desktop/STAT545A/stat545_participation/Stat547_Day9_Tues_20Nov/cm109-automation_examples/01_automation-example_just-r/01_filter-reorder-plot.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

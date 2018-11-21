@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "all:\n\t@echo Build all\n\nclean:\n\t@echo Clean all",
+    "created" : 1542738217725.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1852993215",
+    "id" : "8A1D626A",
+    "lastKnownWriteTime" : 1542737134,
+    "last_content_update" : 1542737134,
+    "path" : "~/Desktop/STAT545A/stat545_participation/Stat547_Day9_Tues_20Nov/Test/Makefile",
+    "project_path" : "Makefile",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "makefile"
+}

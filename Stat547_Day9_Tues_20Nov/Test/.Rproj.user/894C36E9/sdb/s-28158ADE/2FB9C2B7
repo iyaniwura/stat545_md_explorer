@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "## one Makefile to make them all\n\nall: total-words-by-film-race.tsv\n\n#lotr_raw.tsv:\n#\tcurl -L http://bit.ly/lotr_raw-tsv >lotr_raw.tsv\n\nlotr_raw.tsv:\n\tRscript 00_download-data.R\n\nlotr_clean.tsv: lotr_raw.tsv 01_filter-reorder-plot.R\n\tRscript 01_filter-reorder-plot.R\n\trm Rplots.pdf\n\ntotal-words-by-film-race.tsv: lotr_clean.tsv 02_aggregate-plot.R\n\tRscript 02_aggregate-plot.R\n\trm Rplots.pdf\n\nclean:\n\trm -f lotr_raw.tsv lotr_clean.tsv total-words-by-film-race.tsv *.png\n",
+    "created" : 1542738824528.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "90667286",
+    "id" : "2FB9C2B7",
+    "lastKnownWriteTime" : 1533832136,
+    "last_content_update" : 1533832136,
+    "path" : "~/Desktop/STAT545A/stat545_participation/Stat547_Day9_Tues_20Nov/cm109-automation_examples/02_automation-example_r-and-make/Makefile",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "makefile"
+}

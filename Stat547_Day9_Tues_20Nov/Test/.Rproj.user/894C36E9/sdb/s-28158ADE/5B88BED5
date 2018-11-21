@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "## one script to rule them all\n\n## clean out any previous work\noutputs <- c(\"lotr_raw.tsv\",                     # 00_download-data.R\n\t     \"lotr_clean.tsv\",                   # 01_filter-reorder-plot.R\n\t     \"total-words-by-film-race.tsv\",     # 02_aggregate-plot.R\n             list.files(pattern = \"*.png$\"))\nfile.remove(outputs)\n\n## run my scripts\nsource(\"00_download-data.R\")\nsource(\"01_filter-reorder-plot.R\")\nsource(\"02_aggregate-plot.R\")\n",
+    "created" : 1542738790713.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3725418588",
+    "id" : "5B88BED5",
+    "lastKnownWriteTime" : 1533832136,
+    "last_content_update" : 1533832136,
+    "path" : "~/Desktop/STAT545A/stat545_participation/Stat547_Day9_Tues_20Nov/cm109-automation_examples/01_automation-example_just-r/Makefile.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
